@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Usuario</title>
+    </h:head>
+    <h:body>
+        <h:form>    
+
+            <h3>Username</h3>
+            <p:inputText value="#{beanInsertarUsuario.username}"/>
+            <br/>
+            <h3>Password</h3>
+            <p:inputText value="#{beanInsertarUsuario.password}"/>
+            <br/>
+            <h3>Genero</h3>
+            <p:inputText value="#{beanInsertarUsuario.sexo}"/>
+            <br/>
+            <p:commandButton value="Guardar" action="#{beanInsertarUsuario.insertar()}"/>   
+            <br />
+            <p:commandButton value="Salir" action="#{beanInsertarUsuario.salir()}" id="iconOnly" 
+                         style="margin-right:20px;" icon="pi pi-save" title="Ir ->" />
+        </h:form>
+        <h:panelGrid columns="2" cellpadding="10">
+                    <h:form>
+                        Usuarios             
+                        <p:commandButton value="Ver lista" action="#{indexBean.InsertarUsuario()}" id="iconOnly" 
+                                         style="margin-right:20px;" icon="pi pi-chevron-circle-right" title="Ir" />
+                    </h:form>
+        </h:panelGrid>
+    </h:body>
+</html>
+

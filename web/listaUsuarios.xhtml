@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Usuarios</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:dataTable var="dato" value="#{beanListarUsuario.usuario}"
+                         emptyMessage="No hay datos de los Usuarios ">
+            <p:column headerText="Username">
+                <h:outputText value="#{dato.username}" />
+            </p:column>
+
+            <p:column headerText="Sexo">
+                <h:outputText value="#{dato.sexo}" />
+            </p:column>
+
+        </p:dataTable>
+            <p:commandButton value="Regresar" action="#{beanListarUsuario.regresar()}" id="iconOnly" 
+                         style="margin-right:20px;" icon="pi pi-save" title="Ir ->" />
+        </h:form>
+    </h:body>
+</html>
